@@ -1,0 +1,19 @@
+services:
+  frontend:
+    image: angular
+    ports:
+      - "80:80"
+    networks:
+      - front-tier
+      - back-tier
+  backend:
+    image: dev
+    ports:
+      - "3000:3000"
+    networks:
+      - front-tier
+      - back-tier
+
+networks:
+  front-tier:
+  back-tier:
