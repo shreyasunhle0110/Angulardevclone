@@ -1,13 +1,13 @@
 services:
   frontend:
-    image: angular
+    image: shreyasunhale/frontend:1
     ports:
       - "80:80"
     networks:
       - front-tier
       - back-tier
   backend:
-    image: dev
+    image: shreyasunhale/backend:1
     ports:
       - "3000:3000"
     networks:
